@@ -1,4 +1,5 @@
 import { newE2EPage } from '@stencil/core/testing';
+import {describe, expect, it} from '@jest/globals'
 
 describe('my-component', () => {
   it('renders', async () => {

@@ -2,11 +2,11 @@ import { Component, Prop, h } from '@stencil/core';
 import { format } from '../../utils/utils';
 
 @Component({
-  tag: 'my-component',
-  styleUrl: 'my-component.css',
+  tag: 'branches-table',
+  styleUrl: 'branches-table.css',
   shadow: true,
 })
-export class MyComponent {
+export class BranchesTable {
   /**
    * The first name
    */
