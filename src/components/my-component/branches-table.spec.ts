@@ -1,5 +1,6 @@
 import { newSpecPage } from '@stencil/core/testing';
 import { BranchesTable } from './branches-table.component';
+import {describe, expect, it} from '@jest/globals'
 
 describe('my-component', () => {
   it('renders', async () => {

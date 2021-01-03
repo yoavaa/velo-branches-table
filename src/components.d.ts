@@ -5,20 +5,10 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
+import { Branch } from "./components/my-component/branches-table-types";
 export namespace Components {
     interface BranchesTable {
-        /**
-          * The first name
-         */
-        "first": string;
-        /**
-          * The last name
-         */
-        "last": string;
-        /**
-          * The middle name
-         */
-        "middle": string;
+        "branches": Array<Branch>;
     }
 }
 declare global {
@@ -34,18 +24,7 @@ declare global {
 }
 declare namespace LocalJSX {
     interface BranchesTable {
-        /**
-          * The first name
-         */
-        "first"?: string;
-        /**
-          * The last name
-         */
-        "last"?: string;
-        /**
-          * The middle name
-         */
-        "middle"?: string;
+        "branches"?: Array<Branch>;
     }
     interface IntrinsicElements {
         "branches-table": BranchesTable;

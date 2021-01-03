@@ -1,3 +1,117 @@
 :host {
   display: block;
 }
+
+.root {
+  font-family: "HelveticaNeueW01-45Ligh","HelveticaNeueW02-45Ligh","HelveticaNeueW10-45Ligh","Helvetica Neue","Helvetica","Arial","メイリオ, meiryo","ヒラギノ角ゴ pro w3","hiragino kaku gothic pro","sans-serif"
+}
+
+.table-header {
+  background-color: white;
+  border-radius: 9px 9px 0 0;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.table-title {
+  height: 24px;
+  color: rgb(22, 45, 61);
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 24px;
+  width: 487px;
+}
+
+.table-help {
+  color: rgb(56, 153, 236);
+  font-size: 14px;
+  font-weight: normal;
+  height: 18px;
+  line-height: 18px;
+}
+
+.branches-table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  table-layout: fixed;
+  background-color: #fff;
+  empty-cells: show;
+  box-shadow: inset 0px -1px 0px 0px rgb(193, 228, 254),
+  inset 0px 1px 0px 0px rgb(193, 228, 254);
+  font-size: 14px;
+}
+
+.branches-table thead {
+  line-height: 18px;
+  background: rgb(218, 239, 254);
+  border-radius: 0px;
+  border-bottom: solid 1px rgb(223, 229, 235);
+  height: 36px;
+}
+
+.branches-table th {
+  padding-top: 9px;
+  padding-bottom: 9px;
+  height: 24px;
+  text-align: left;
+  font-weight: normal;
+}
+
+.branches-table > tr {
+  height: 80px
+}
+tr:hover > td {
+  cursor: pointer;
+  background-color: #EAF7FF;
+}
+
+.branch-thumbnail-cell {
+  position: relative;
+}
+
+.branch-thumbnail-published-label {
+  position: absolute;
+  top: 25px;
+  left: 12px;
+  background: rgb(96, 188, 87);
+  border-radius: 2px;
+  height: 18px;
+  width: 49px;
+  text-align: center;
+  color: white;
+}
+
+.branch-thumbnail {
+  width: 60px;
+  height: 40px;
+  position: absolute;
+  top: 19px;
+  left: 24px;
+}
+
+.branch-name {
+  font-weight: bold;
+}
+
+.branch-detail {
+  font-size: 12px;
+  color: rgb(122, 146, 165);
+}
+
+.published {
+  color: rgb(96, 188, 87);
+}
+
+.test-site {
+  color: rgb(56, 153, 236);
+}
+
+.table-footer {
+  background-color: white;
+  color: rgb(56, 153, 236);
+  border-radius: 0 0 9px 9px;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+}

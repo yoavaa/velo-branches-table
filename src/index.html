@@ -8,10 +8,53 @@
     <script type="module" src="/build/velo-branches-table.esm.js"></script>
     <script nomodule src="/build/velo-branches-table.js"></script>
     <style>
-      body {background-color: rgb(240, 244, 247);}
+      body, html {
+        background-color: rgb(240, 244, 247);
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        display: flex;
+        flex: auto;
+      }
+
+      branches-table {
+        width: 960px;
+        margin: auto auto;
+      }
     </style>
   </head>
   <body>
-    <branches-table first="Stencil" last="'Don't call me a framework' JS"></branches-table>
+    <branches-table></branches-table>
+
   </body>
+  <script type="module">
+    console.log('dfgfdg')
+
+    const branchesTable = document.querySelector('branches-table');
+    branchesTable.branches = [
+      {
+        thumbnail: 'https://manage.wix.com/site-thumbnail/9080a61f-a82a-4cf9-876f-9eb31ab2084c?preset=site-list',
+        name: 'Original Branch',
+        lastSavedUser: 'shayw@wix.com',
+        lastSavedDate: new Date(),
+        status: 0,
+        statusDate: new Date()
+      },
+      {
+        thumbnail: 'https://manage.wix.com/site-thumbnail/7a3d20ae-165c-4ec4-a05e-017c8e050813?preset=site-list',
+        name: 'Black friday',
+        lastSavedUser: 'shayw@wix.com',
+        lastSavedDate: new Date(),
+        status: 1,
+        statusDate: new Date()
+      },
+      {
+        thumbnail: 'https://manage.wix.com/site-thumbnail/e347ab89-0172-45e2-a545-e230db0fc62d?preset=site-list',
+        name: 'V3',
+        lastSavedUser: 'Site Owner',
+        lastSavedDate: new Date(),
+        status: 2,
+      }
+    ]
+  </script>
 </html>
