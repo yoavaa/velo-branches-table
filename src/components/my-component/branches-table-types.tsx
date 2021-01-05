@@ -5,6 +5,7 @@ export enum BranchState {
 }
 
 export interface Branch {
+  id: string,
   thumbnail: string,
   name: string,
   lastSavedUser: string,
