@@ -115,3 +115,42 @@ tr:hover > td {
 .test-site {
   color: rgb(56, 153, 236);
 }
+
+.action {
+  color: rgb(22, 45, 61);
+  padding: 6px 44px 6px 18px;
+  white-space: nowrap;
+  font-size: 14px;
+  font-weight: normal;
+  height: 18px;
+  line-height: 18px;
+}
+
+.action:hover {
+  color: rgb(56, 153, 236);
+}
+
+.action svg {
+  vertical-align: bottom;
+}
+
+.action.delete {
+  color: rgb(238, 89, 81)
+}
+.action.delete:hover {
+  color: #FFE1E1
+}
+
+.divider {
+  padding: 6px 24px 5px 24px;
+}
+
+.divider hr {
+  background-color: #DFE5EB;
+  min-height: 1px;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  border: 0;
+}
+}

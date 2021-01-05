@@ -1,5 +1,6 @@
 import {Component, h, Prop} from '@stencil/core';
 import {Branch, BranchState} from "./branches-table-types";
+import {copyIcon, deleteIcon, renameIcon} from "../icons";
 
 @Component({
   tag: 'branches-table',
@@ -36,7 +37,12 @@ export class BranchesTable {
           <td><span class="branch-detail">{branch.lastSavedUser}</span><br/><span class="branch-detail">{this.formatDate(branch.lastSavedDate)}</span></td>
           <td>{this.formatStatus(branch.status)}<br/><span class="branch-detail">{this.formatDate(branch.statusDate)}</span></td>
           <td>
-            <action-button>some text</action-button>
+            <action-button>
+              <div class="action">{renameIcon()} <span>Rename</span></div>
+              <div class="action">{copyIcon()} <span>Duplicate</span></div>
+              <div class="divider"><hr/></div>
+              <div class="action delete">{deleteIcon()} <span>Delete</span></div>
+            </action-button>
           </td>
         </tr>
       )

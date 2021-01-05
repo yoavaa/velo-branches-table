@@ -49,8 +49,6 @@
   border-radius: 8px;
   box-sizing: border-box;
   box-shadow: var(--wsr-shadow30, 0 6px 6px 0 rgba(22, 45, 61, 0.06), 0 0 18px 0 rgba(22, 45, 61, 0.12));
-  width: 200px;
-  height: 100px;
   bottom: 50px;
   left: -48px;
   background-color: white;
