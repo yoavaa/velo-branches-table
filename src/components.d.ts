@@ -5,7 +5,7 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
-import { Branch } from "./components/my-component/branches-table-types";
+import { Branch } from "./components/branches-table/branches-table-types";
 export namespace Components {
     interface ActionButton {
     }
