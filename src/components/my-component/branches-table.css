@@ -39,6 +39,12 @@
   vertical-align: middle;
 }
 
+.table-help:hover {
+  color: #3899EC;
+  cursor: pointer;
+}
+
+
 .table-footer {
   background-color: white;
   color: rgb(56, 153, 236);
@@ -46,6 +52,11 @@
   padding: 30px;
   display: flex;
   justify-content: center;
+}
+
+.table-new-branch:hover {
+  color: #3899EC;
+  cursor: pointer;
 }
 
 .branches-table {
@@ -161,4 +172,4 @@ tr:hover > td {
   margin: 0;
   border: 0;
 }
-}
+

@@ -1,6 +1,6 @@
 import {Component, h, Prop} from '@stencil/core';
 import {Branch, BranchState} from "./branches-table-types";
-import {copyIcon, deleteIcon, helpIcon, renameIcon} from "../icons";
+import {clockIcon, copyIcon, deleteIcon, helpIcon, renameIcon} from "../icons";
 
 @Component({
   tag: 'branches-table',
@@ -24,6 +24,30 @@ export class BranchesTable {
       return date.toLocaleString();
   }
 
+  newBranch() {
+    console.log('new branch')
+  }
+
+  whatIsaBranch() {
+    console.log('what is a branch?')
+  }
+
+  renameBranch(branch: Branch) {
+    console.log('rename', branch);
+  }
+
+  copyBranch(branch: Branch) {
+    console.log('copy', branch);
+  }
+
+  showBranchHistory(branch: Branch) {
+    console.log('history', branch);
+  }
+
+  deleteBranch(branch: Branch) {
+    console.log('delete', branch);
+  }
+
   renderTableContent() {
     return this.branches.map(branch => {
       return (<tr>
@@ -38,10 +62,11 @@ export class BranchesTable {
           <td>{this.formatStatus(branch.status)}<br/><span class="branch-detail">{this.formatDate(branch.statusDate)}</span></td>
           <td>
             <action-button>
-              <div class="action">{renameIcon()} <span>Rename</span></div>
-              <div class="action">{copyIcon()} <span>Duplicate</span></div>
+              <div class="action" onClick={_ => this.renameBranch(branch)}>{renameIcon()} <span>Rename</span></div>
+              <div class="action" onClick={_ => this.copyBranch(branch)}>{copyIcon()} <span>Duplicate</span></div>
+              <div class="action" onClick={_ => this.showBranchHistory(branch)}>{clockIcon()} <span>See Branch History</span></div>
               <div class="divider"><hr/></div>
-              <div class="action delete">{deleteIcon()} <span>Delete</span></div>
+              <div class="action delete" onClick={_ => this.deleteBranch(branch)}>{deleteIcon()} <span>Delete</span></div>
             </action-button>
           </td>
         </tr>
@@ -54,7 +79,7 @@ export class BranchesTable {
     return <div class="root">
       <div class="table-header">
         <div class="table-title">My Branches</div>
-        <div class="table-help">{helpIcon()} <span>What is a branch?</span></div>
+        <div class="table-help" onClick={_ => this.whatIsaBranch()}>{helpIcon()} <span>What is a branch?</span></div>
       </div>
       <table class="branches-table">
         <thead>
@@ -69,7 +94,7 @@ export class BranchesTable {
         {this.renderTableContent()}
       </table>
       <div class="table-footer">
-        <div class="table-new-branch">+ Create New Branch</div>
+        <div class="table-new-branch" onClick={_ => this.newBranch()}>+ Create New Branch</div>
       </div>
     </div>;
   }
