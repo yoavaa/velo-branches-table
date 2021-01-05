@@ -43,11 +43,29 @@
 }
 
 .menu {
-  width: 100px;
-  height: 100px;
   position: absolute;
-  top: 0;
-  left: 0;
-  background-color: blue;
+  padding: 10px 0 6px 0;
+  border: 0;
+  border-radius: 8px;
+  box-sizing: border-box;
+  box-shadow: var(--wsr-shadow30, 0 6px 6px 0 rgba(22, 45, 61, 0.06), 0 0 18px 0 rgba(22, 45, 61, 0.12));
+  width: 200px;
+  height: 100px;
+  bottom: 50px;
+  left: -48px;
+  background-color: white;
   z-index: 9999;
+}
+
+.menu:after {
+  top: 100%;
+  left: 66px;
+  content: "";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border: 6px solid rgba(136, 183, 213, 0);
+  border-top-color: white;
+  margin-left: -6px;
 }

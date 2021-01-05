@@ -36,7 +36,7 @@ export class BranchesTable {
           <td><span class="branch-detail">{branch.lastSavedUser}</span><br/><span class="branch-detail">{this.formatDate(branch.lastSavedDate)}</span></td>
           <td>{this.formatStatus(branch.status)}<br/><span class="branch-detail">{this.formatDate(branch.statusDate)}</span></td>
           <td>
-            <action-button/>
+            <action-button>some text</action-button>
           </td>
         </tr>
       )

@@ -26,7 +26,7 @@ export class ActionButton {
         <div class="click-trap" onClick={_ => this.close()}/>
       )}
       {this.isOpen && (
-        <div class="menu"></div>
+        <div class="menu"><slot/></div>
       )}
     </div>
   }
