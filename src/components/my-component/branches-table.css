@@ -31,6 +31,14 @@
   line-height: 18px;
 }
 
+.table-help svg {
+  vertical-align: middle;
+}
+
+.table-help span {
+  vertical-align: middle;
+}
+
 .table-footer {
   background-color: white;
   color: rgb(56, 153, 236);

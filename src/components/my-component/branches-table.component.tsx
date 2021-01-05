@@ -1,6 +1,6 @@
 import {Component, h, Prop} from '@stencil/core';
 import {Branch, BranchState} from "./branches-table-types";
-import {copyIcon, deleteIcon, renameIcon} from "../icons";
+import {copyIcon, deleteIcon, helpIcon, renameIcon} from "../icons";
 
 @Component({
   tag: 'branches-table',
@@ -54,7 +54,7 @@ export class BranchesTable {
     return <div class="root">
       <div class="table-header">
         <div class="table-title">My Branches</div>
-        <div class="table-help">What is a branch?</div>
+        <div class="table-help">{helpIcon()} <span>What is a branch?</span></div>
       </div>
       <table class="branches-table">
         <thead>
