@@ -7,11 +7,19 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 import { Branch } from "./components/my-component/branches-table-types";
 export namespace Components {
+    interface ActionButton {
+    }
     interface BranchesTable {
         "branches": Array<Branch>;
     }
 }
 declare global {
+    interface HTMLActionButtonElement extends Components.ActionButton, HTMLStencilElement {
+    }
+    var HTMLActionButtonElement: {
+        prototype: HTMLActionButtonElement;
+        new (): HTMLActionButtonElement;
+    };
     interface HTMLBranchesTableElement extends Components.BranchesTable, HTMLStencilElement {
     }
     var HTMLBranchesTableElement: {
@@ -19,14 +27,18 @@ declare global {
         new (): HTMLBranchesTableElement;
     };
     interface HTMLElementTagNameMap {
+        "action-button": HTMLActionButtonElement;
         "branches-table": HTMLBranchesTableElement;
     }
 }
 declare namespace LocalJSX {
+    interface ActionButton {
+    }
     interface BranchesTable {
         "branches"?: Array<Branch>;
     }
     interface IntrinsicElements {
+        "action-button": ActionButton;
         "branches-table": BranchesTable;
     }
 }
@@ -34,6 +46,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "action-button": LocalJSX.ActionButton & JSXBase.HTMLAttributes<HTMLActionButtonElement>;
             "branches-table": LocalJSX.BranchesTable & JSXBase.HTMLAttributes<HTMLBranchesTableElement>;
         }
     }

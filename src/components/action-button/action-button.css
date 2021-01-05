@@ -1,0 +1,53 @@
+.action-button {
+  border: none;
+  background: white;
+  color: #3899EC;
+  width: 36px;
+  height: 36px;
+  border-radius: 18px;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.action-button:hover {
+  color: #fff;
+  border-color: transparent;
+  background: #4EB7F5;
+}
+
+.action-button:active {
+  background: #3899EC;
+}
+
+.action-button:focus {
+  outline: none;
+  box-shadow: none;
+}
+.action-button:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px #aadbfc;
+}
+
+.action-button-root {
+  position: relative;
+}
+
+.click-trap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+}
+
+.menu {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: blue;
+  z-index: 9999;
+}

@@ -115,35 +115,3 @@ tr:hover > td {
 .test-site {
   color: rgb(56, 153, 236);
 }
-
-
-.menu-button {
-  border: none;
-  background: white;
-  color: #3899EC;
-  width: 36px;
-  height: 36px;
-  border-radius: 18px;
-  padding: 0;
-  box-sizing: border-box;
-  text-align: center;
-}
-
-.menu-button:hover {
-  color: #fff;
-  border-color: transparent;
-  background: #4EB7F5;
-}
-
-.menu-button:active {
-  background: #3899EC;
-}
-
-.menu-button:focus {
-  outline: none;
-  box-shadow: none;
-}
-.menu-button:focus-visible {
-  outline: none;
-  box-shadow: 0 0 0 3px #aadbfc;
-}
