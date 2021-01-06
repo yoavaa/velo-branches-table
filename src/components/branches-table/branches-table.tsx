@@ -1,4 +1,4 @@
-import {Component, h, Prop} from '@stencil/core';
+import {Component, h, Prop, Element} from '@stencil/core';
 import {Branch, BranchState} from "./branches-table-types";
 import {clockIcon, copyIcon, deleteIcon, helpIcon, renameIcon} from "../icons";
 
@@ -9,6 +9,7 @@ import {clockIcon, copyIcon, deleteIcon, helpIcon, renameIcon} from "../icons";
 })
 export class BranchesTable {
   @Prop() branches: string = '[]';
+  @Element() el: HTMLElement;
 
   parseBranches(newValue: string): Array<Branch> {
     try {
@@ -33,28 +34,33 @@ export class BranchesTable {
       return date.toLocaleString();
   }
 
+  dispatchEventToCorvid(event: string, details: any = {}) {
+    this.el.dispatchEvent(new CustomEvent(event,
+      { detail: details }));
+  }
+
   newBranch() {
-    console.log('new branch')
+    this.dispatchEventToCorvid('new-branch');
   }
 
   whatIsaBranch() {
-    console.log('what is a branch?')
+    this.dispatchEventToCorvid('what-is-a-branch');
   }
 
   renameBranch(branch: Branch) {
-    console.log('rename', branch);
+    this.dispatchEventToCorvid('rename-branch', {id: branch.id});
   }
 
   copyBranch(branch: Branch) {
-    console.log('copy', branch);
+    this.dispatchEventToCorvid('copy-branch', {id: branch.id});
   }
 
   showBranchHistory(branch: Branch) {
-    console.log('history', branch);
+    this.dispatchEventToCorvid('branch-history', {id: branch.id});
   }
 
   deleteBranch(branch: Branch) {
-    console.log('delete', branch);
+    this.dispatchEventToCorvid('delete-branch', {id: branch.id});
   }
 
   renderTableContent() {
