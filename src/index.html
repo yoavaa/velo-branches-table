@@ -31,7 +31,7 @@
     console.log('dfgfdg')
 
     const branchesTable = document.querySelector('branches-table');
-    branchesTable.branches = [
+    branchesTable.branches = JSON.stringify([
       {
         id: 'id1',
         thumbnail: 'https://manage.wix.com/site-thumbnail/9080a61f-a82a-4cf9-876f-9eb31ab2084c?preset=site-list',
@@ -56,6 +56,6 @@
         lastSavedDate: new Date(),
         status: 2,
       }
-    ]
+    ])
   </script>
 </html>

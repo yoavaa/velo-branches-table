@@ -8,7 +8,16 @@ import {clockIcon, copyIcon, deleteIcon, helpIcon, renameIcon} from "../icons";
   shadow: true,
 })
 export class BranchesTable {
-  @Prop() branches: Array<Branch>;
+  @Prop() branches: string = '[]';
+
+  parseBranches(newValue: string): Array<Branch> {
+    try {
+      return JSON.parse(newValue);
+    }
+    catch (e) {
+      throw new Error('failed to parse branches attribute - ' + e.message);
+    }
+  }
 
   formatStatus(status) {
     if (status === BranchState.published)
@@ -49,7 +58,7 @@ export class BranchesTable {
   }
 
   renderTableContent() {
-    return this.branches.map(branch => {
+    return this.parseBranches(this.branches).map(branch => {
       return (<tr>
           <td class="branch-thumbnail-cell">
             <img class="branch-thumbnail" src={branch.thumbnail}/>
@@ -75,7 +84,6 @@ export class BranchesTable {
   }
 
   render() {
-    console.log(this.branches)
     return <div class="root">
       <div class="table-header">
         <div class="table-title">My Branches</div>

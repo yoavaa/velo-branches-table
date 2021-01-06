@@ -5,12 +5,11 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
-import { Branch } from "./components/branches-table/branches-table-types";
 export namespace Components {
     interface ActionButton {
     }
     interface BranchesTable {
-        "branches": Array<Branch>;
+        "branches": string;
     }
 }
 declare global {
@@ -35,7 +34,7 @@ declare namespace LocalJSX {
     interface ActionButton {
     }
     interface BranchesTable {
-        "branches"?: Array<Branch>;
+        "branches"?: string;
     }
     interface IntrinsicElements {
         "action-button": ActionButton;

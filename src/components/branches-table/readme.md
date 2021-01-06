@@ -7,9 +7,9 @@
 
 ## Properties
 
-| Property   | Attribute | Description | Type       | Default     |
-| ---------- | --------- | ----------- | ---------- | ----------- |
-| `branches` | --        |             | `Branch[]` | `undefined` |
+| Property   | Attribute  | Description | Type     | Default |
+| ---------- | ---------- | ----------- | -------- | ------- |
+| `branches` | `branches` |             | `string` | `'[]'`  |
 
 
 ## Dependencies
