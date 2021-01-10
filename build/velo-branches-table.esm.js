@@ -1,0 +1,1 @@
+import{p as a,b as n}from"./p-4b7782fc.js";(()=>{const n=import.meta.url,t={};return""!==n&&(t.resourcesUrl=new URL(".",n).href),a(t)})().then((a=>n([["p-af8ca3f2",[[1,"branches-table",{branches:[1]}],[1,"action-button",{isOpen:[32]}]]]],a)));

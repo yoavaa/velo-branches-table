@@ -1,0 +1,43 @@
+<!doctype html><html dir="ltr" lang="en"><head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0"> <title>Stencil Component Starter</title> <script type="module" data-stencil data-resources-url="/build/" data-stencil-namespace="velo-branches-table">import{p as a,b as n}from"/build/p-4b7782fc.js";(()=>{const n=import.meta.url,t={};return""!==n&&(t.resourcesUrl=new URL(".",n).href),a(t)})().then((a=>n([["p-af8ca3f2",[[1,"branches-table",{branches:[1]}],[1,"action-button",{isOpen:[32]}]]]],a)));</script> <script nomodule="" src="/build/velo-branches-table.js" data-stencil></script> <style>body, html {
+        background-color: rgb(240, 244, 247);
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        display: flex;
+        flex: auto;
+      }
+
+      branches-table {
+        width: 960px;
+        margin: auto auto;
+      }</style> </head> <body> <branches-table></branches-table> <script type="module">
+    console.log('dfgfdg')
+
+    const branchesTable = document.querySelector('branches-table');
+    branchesTable.branches = JSON.stringify([
+      {
+        id: 'id1',
+        thumbnail: 'https://manage.wix.com/site-thumbnail/9080a61f-a82a-4cf9-876f-9eb31ab2084c?preset=site-list',
+        name: 'Original Branch',
+        lastSavedUser: 'shayw@wix.com',
+        lastSavedDate: new Date(),
+        status: 0,
+        statusDate: new Date()
+      },
+      {
+        thumbnail: 'https://manage.wix.com/site-thumbnail/7a3d20ae-165c-4ec4-a05e-017c8e050813?preset=site-list',
+        name: 'Black friday',
+        lastSavedUser: 'shayw@wix.com',
+        lastSavedDate: new Date(),
+        status: 1,
+        statusDate: new Date()
+      },
+      {
+        thumbnail: 'https://manage.wix.com/site-thumbnail/e347ab89-0172-45e2-a545-e230db0fc62d?preset=site-list',
+        name: 'V3',
+        lastSavedUser: 'Site Owner',
+        lastSavedDate: new Date(),
+        status: 2,
+      }
+    ])
+  </script> </body></html>
