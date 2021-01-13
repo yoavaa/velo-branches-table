@@ -6,7 +6,7 @@
 
 This repo is an example of building a Velo Custom Element as a Standard Web Component using Stencil.js.
 
-[Velo Bramches Table](https://www.velo-stencil-branch-table.com/)
+An Example Velo site with the Branches Table Web Component can be found [here](https://www.velo-stencil-branch-table.com/).
 
 # Related Resources
 
